@@ -32,6 +32,11 @@ commend this line out in /boot/config.txt:
 ```
 (See https://shop.pimoroni.com/products/audio-amp-shim-3w-mono-amp for details)
 
+GPIOzero:
+```
+sudo apt install python3-gpiozero
+```
+
 # Pi Connectors
 - PIN 6: GND
 - Pin 11 / GPIO 17: LED 1
