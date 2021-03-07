@@ -7,7 +7,7 @@ import vlc
 
 led = LED(27)
 led2 = LED(17)
-p = vlc.MediaPlayer("/home/pi/projects/bahnuebergang/sound.mp3")
+readysound = vlc.MediaPlayer("/home/pi/projects/bahnuebergang/ding.wav")
 
 # Use Pin Numbers, not GPIO numbers
 # GPIO.setmode(GPIO.BOARD)
@@ -18,6 +18,7 @@ def switch_on(pin):
     # blinken
     print("blinke")
     global led, led2, p
+    p = vlc.MediaPlayer("/home/pi/projects/bahnuebergang/sound.mp3")
     p.play()
 
     i = 0
@@ -35,6 +36,7 @@ def switch_on(pin):
 GPIO.add_event_detect(9, GPIO.FALLING, bouncetime=1000)
 GPIO.add_event_callback(9, switch_on)
 
+readysound.play()
 led.on()
 led2.on()
 sleep(1.5)
