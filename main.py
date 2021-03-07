@@ -15,9 +15,7 @@ readysound = vlc.MediaPlayer("/home/pi/projects/bahnuebergang/ding.wav")
 GPIO.setup(9, GPIO.IN)
 
 def switch_on(pin):
-    # blinken
-    print("blinke")
-    global led, led2, p
+    global led, led2
     p = vlc.MediaPlayer("/home/pi/projects/bahnuebergang/sound.mp3")
     p.play()
 

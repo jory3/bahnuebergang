@@ -16,6 +16,8 @@ Note: I am just beginning with Raspberry Pi and Python, this project is not mean
 Install audio player
 ```
 pip install python-vlc
+# or
+pip install python3-vlc
 ```
 
 add two lines to /boot/config.txt:
@@ -35,3 +37,11 @@ commend this line out in /boot/config.txt:
 - Pin 11 / GPIO 17: LED 1
 - Pin 13 / GPIO 27: LED 2
 - GPIO 18, 19, 21: Used by Audio Amp Shim
+- PINs 1 + 21: Switch
+
+## Setup
+- Checkout files to /home/pi/projects/bahnuebergang
+- install service: 
+````
+sudo sh /home/pi/projects/bahnuebergang/install_service.sh
+````
