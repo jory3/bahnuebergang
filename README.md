@@ -15,9 +15,9 @@ Note: I am just beginning with Raspberry Pi and Python, this project is not mean
 
 Install audio player
 ```
-pip install python-vlc
-# or
 pip3 install python-vlc
+
+sudo apt-get install vlc
 ```
 
 add two lines to /boot/config.txt:
