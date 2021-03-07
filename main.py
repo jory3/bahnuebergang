@@ -16,11 +16,12 @@ GPIO.setup(9, GPIO.IN)
 
 def switch_on(pin):
     global led, led2
-    p = vlc.MediaPlayer("/home/pi/projects/bahnuebergang/sound.mp3")
+    p = vlc.MediaPlayer("/home/pi/projects/bahnuebergang/barriere.wav")
     p.play()
+    print("go")
 
     i = 0
-    while i < 3:
+    while i < 13:
         led.on()
         led2.off()
         sleep(1)
@@ -31,7 +32,7 @@ def switch_on(pin):
     led2.off()
     return
 
-GPIO.add_event_detect(9, GPIO.FALLING, bouncetime=1000)
+GPIO.add_event_detect(9, GPIO.FALLING, bouncetime=30*1000)
 GPIO.add_event_callback(9, switch_on)
 
 readysound.play()
