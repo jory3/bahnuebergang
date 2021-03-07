@@ -32,7 +32,7 @@ def switch_on(pin):
     led2.off()
     return
 
-GPIO.add_event_detect(9, GPIO.FALLING, bouncetime=30*1000)
+GPIO.add_event_detect(9, GPIO.FALLING, bouncetime=32*1000)
 GPIO.add_event_callback(9, switch_on)
 
 readysound.play()
