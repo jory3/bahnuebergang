@@ -17,7 +17,7 @@ Install audio player
 ```
 pip install python-vlc
 # or
-pip install python3-vlc
+pip3 install python-vlc
 ```
 
 add two lines to /boot/config.txt:
